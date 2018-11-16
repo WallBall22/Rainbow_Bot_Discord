@@ -1,7 +1,7 @@
 {
-  "name": "Kahrbaa",
+  "name": "Amr",
   "version": "2.1.0",
-  "description": "-- Script Spam , Farm Credit By Kahrbaa --",
+  "description": "-- rainbow bot for discord --",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"

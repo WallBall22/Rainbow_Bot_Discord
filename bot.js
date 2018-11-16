@@ -1,88 +1,40 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
-const client2 = new Discord.Client();
-
-client.on('ready', () => {
-   console.log(`----------------`);
-   console.log(`Credit Farmm - Script By : Kahrbaa `);
-   console.log(`----------------`);
-   console.log(`Loadinng`);
-   console.log(`Loadinng.`);
-   console.log(`Loadinng..`);
-   console.log(`Loadinng...`);
-   console.log(`This Bots Online ' `);
-   console.log(`----------------`);
-});
-
-
 client.on('message', message => {
-    if(message.content === '-راتب'){
-        message.channel.send('#daily')
+          let args = message.content.split(' ').slice(1);
+   if(message.content.split(' ')[0] == 'لون'){
+           const embedd = new Discord.RichEmbed()
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**لا يوجد لون بهذا الأسم ** ❌ `)
+   .setColor(`ff0000`)
+ 
+    if(!isNaN(args) && args.length > 0)
+   
+ 
+if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.sendEmbed(embedd);
+ 
+ 
+       var a = message.guild.roles.find("name",`${args}`)
+                if(!a)return;
+const embed = new Discord.RichEmbed()
+                   
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**Done , تم تغير لونك . ✅ **`)
+ 
+   .setColor(`${a.hexColor}`)
+  message.channel.sendEmbed(embed);
+          if (!args)return;
+setInterval(function(){})
+                  let count = 0;
+                  let ecount = 0;
+        for(let x = 1; x < 201; x++){
+           
+            message.member.removeRole(message.guild.roles.find("name",`${x}`))
+         
+            }
+                message.member.addRole(message.guild.roles.find("name",`${args}`));
+       
+           
     }
 });
 
-client.on('message', message => {
-    if(message.content === '-مبلغ'){
-        message.channel.send('#credits')
-    }
-});
 
-client.on('message', message => {
-    if(message.content === '-ريب'){
-        message.channel.send('#credits')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '-راتب'){
-        message.channel.send('#daily')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '-مبلغ'){
-        message.channel.send('#credits')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '-ريب'){
-        message.channel.send('#credits')
-    }
-});
-
-
-
-client.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
-if (message.content === '!spam') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Credit Spam , Frame , Credit By Kahrba , Farm Credit By Kahrba, ez Farm - كردت اسبام اسبام اسبام اوف ءف اح اح نار ج **[ " ${x} " ]`)
-          .then(m => {
-            count++;
-          })
-          
-        }
-      }
-});
-
-client2.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
-if (message.content === '!spam') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Credit Spam , Frame , Credit By Kahrba , Farm Credit By Kahrba, ez Farm - كردت اسبام اسبام اسبام اوف ءف اح اح نار ج **[ " ${x} " ]`)
-          .then(m => {
-            count++;
-          })
-          
-        }
-      }
-});
-
-
-
-
-client.login(process.env.TOKEN);// لا تغير فيها شيء
-client2.login(process.env.TOKEN2);// لا تغير فيها شيء
+ 
